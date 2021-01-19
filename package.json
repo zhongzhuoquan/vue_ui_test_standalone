@@ -1,15 +1,33 @@
 {
-  "name": "vue_ui_test",
+  "name": "vue_ui_test_standalone",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "dexie": "^3.0.3",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.14.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "mint-ui": "^2.2.13",
+    "moment": "^2.29.1",
+    "serialport": "^9.0.2",
     "vue": "^2.6.11",
+    "vue-axios": "^3.2.0",
+    "vue-easy-printer": "^1.0.6",
+    "vue-echarts": "^5.0.0-beta.0",
     "vue-router": "^3.2.0",
+    "vue-to-pdf": "^1.0.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -17,8 +35,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "electron": "^8.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
